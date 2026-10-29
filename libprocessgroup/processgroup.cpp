@@ -8,6 +8,14 @@
 #include <vector>
 
 extern "C" {
+bool _Z22CgroupGetAttributePathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPS5_(
+        const std::string& attr_name, std::string* path);
+
+bool CgroupGetAttributePath(const std::string& attr_name, std::string* path) {
+    return _Z22CgroupGetAttributePathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPS5_(
+            attr_name, path);
+}
+
 bool _Z23CgroupGetControllerPathRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEPS5_(
         const std::string& cgroup_name, std::string* path);
 
