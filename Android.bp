@@ -176,6 +176,14 @@ cc_library {
     vendor_available: true,
 }
 
+cc_library_shared {
+    name: "libc_aeabi_div0_shim",
+    srcs: ["libc/aeabi_div0.c"],
+    compile_multilib: "32",
+    vendor: true,
+    stl: "none",
+}
+
 cc_library {
     name: "libc_mutexdestroy_shim",
     shared_libs: ["libc"],
